@@ -6,6 +6,7 @@
  * Resumen: Tarea 5
  ******************************************************************************/
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 /*
@@ -23,9 +24,10 @@ using namespace std;
  *      24    576  13824
  * 
  */
-int main() {   
-    cout << "x" << "x^2" << "x^3" << endl;
-    cout << "===" << "===" << "===" << endl;
+int main() {  
+    const int ANCHO = 7;
+    cout << right << setw(ANCHO) << "x" << setw(ANCHO) << "x^2" << setw(ANCHO) << "x^3" << endl;
+    cout << right << setw(ANCHO) << "===" << setw(ANCHO) << "===" << setw(ANCHO) << "===" << endl;
 
     // La instrucción que aparece a continuación es una «instrucción iterativa
     // indexada» o bucle «for» que veremos con detalle en el tema 5. Mientras
@@ -37,6 +39,6 @@ int main() {
     // sucesivamente irá incrementando su valor hasta que en la 24ª y última
     // iteración, x valdrá 24.
     for (int x = 1; x <= 24; x++) {
-        cout << x << x * x << x * x * x << endl;
+        cout << right << setw(ANCHO) << x << setw(ANCHO) << x * x << setw(ANCHO) << x * x * x << endl;
     }
 }

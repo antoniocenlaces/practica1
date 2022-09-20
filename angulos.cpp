@@ -7,6 +7,7 @@
  ******************************************************************************/
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 /*
@@ -26,10 +27,12 @@ using namespace std;
  */
 int main() {
     const int ANCHO = 9;
-    cout << "Grados" << "Radianes" << "Seno" << "Coseno"
+    const int PRECISION =4;
+    const int INTEGER = 0;
+    cout << right << setw(ANCHO) << "Grados" << setw(ANCHO) << "Radianes" << setw(ANCHO) << "Seno" << setw(ANCHO) << "Coseno"
          << endl;
 
-    cout << "========" << "========" << "========" << "========" << endl;
+    cout << right << setw(ANCHO) << "========" << right << setw(ANCHO) << "========" << right << setw(ANCHO) << "========" << right << setw(ANCHO) << "========" << endl;
 
     // La instrucción que aparece a continuación es una «instrucción iterativa
     // indexada» o bucle «for» que veremos con detalle en el tema 5. Mientras
@@ -42,6 +45,6 @@ int main() {
     // iteración, grados valdrá 180.
     for (double grados = 0; grados <= 180; grados += 10) {
         double radianes = M_PI * grados / 180.0;
-        cout << grados << radianes << sin(radianes) << cos(radianes) << endl;
+        cout << right << setw(ANCHO) << fixed <<setprecision(INTEGER) << grados  << setprecision(PRECISION) << setw(ANCHO) << radianes << setw(ANCHO) << sin(radianes) << setw(ANCHO) << cos(radianes) << endl;
     }
 }

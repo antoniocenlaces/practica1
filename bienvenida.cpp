@@ -13,4 +13,5 @@
  */
 int main() {
     std::cout << "Bienvenidos a UNIZAR" << std::endl;
+    std::cout << "Bienvenidos a Prog1" << std::endl;
 }
